@@ -135,44 +135,26 @@
                     <div class="col-md-6">
                         <h2 class="title1 upper">Project Description</h2>
                         <p>
-                            Inbox Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum recusandae rem animi accusamus quisquam reprehenderit sed voluptates, numquam, quibusdam velit dolores repellendus tempora corrupti accusantium obcaecati voluptate totam eveniet laboriosam.</p>
+                            Inbox Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum recusandae rem animi
+                            accusamus quisquam reprehenderit sed voluptates, numquam, quibusdam velit dolores
+                            repellendus tempora corrupti accusantium obcaecati voluptate totam eveniet laboriosam.</p>
                         <p>
-                            Inbox Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum recusandae rem animi accusamus quisquam reprehenderit sed voluptates, numquam, quibusdam velit dolores repellendus tempora corrupti.</p>
+                            Inbox Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum recusandae rem animi
+                            accusamus quisquam reprehenderit sed voluptates, numquam, quibusdam velit dolores
+                            repellendus tempora corrupti.</p>
                         <span class="spacer20"></span>
                         <!-- Social Share-->
                         <div>
-                            <div id="share_on_socials">
-                                <span class="social_share_btn">Share :</span>
-
-                                <a class="facebook"
-                                   href="http://www.facebook.com/sharer.php?s=100&amp;p[url]=http://www.yourlink.com&amp;p[title]=your-post-title&amp;p[summary]=your-content-here&amp;p[../images[0]=http://www.yourlink.com/image.jpg"
-                                   target="_blank"><i class="ico-facebook4"></i></a>
-                                <a class="twitter"
-                                   href="http://twitter.com/home?status=your-post-title+http://www.yourlink.com"
-                                   target="_blank"><i class="ico-twitter4"></i></a>
-                                <a class="googleplus" href="https://plus.google.com/share?url=http://www.yourlink.com"
-                                   target="_blank"><i class="ico-google-plus"></i></a>
-                                <a class="pinterest"
-                                   href="http://pinterest.com/pin/create/bookmarklet/?media=http://www.yourlink.com/image.jpg&amp;url=http://www.yourlink.com&amp;is_video=false&amp;description=your-post-title"
-                                   target="_blank"><i class="ico-pinterest-p"></i></a>
-
-                                <a class="linkedin"
-                                   href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.yourlink.com&amp;title=your-post-title&amp;source=http://www.yourlink.com"
-                                   target="_blank"><i class="ico-linkedin3"></i></a>
-                                <a class="email"
-                                   href="mailto:mail@mail.com?subject=your-post-title&amp;body=http://www.yourlink.com"><i
-                                        class="ico-envelope-o"></i></a>
-                                <!-- <a class="stumbleupon" href="http://www.stumbleupon.com/submit?url=http://www.yourlink.com&amp;title=your-post-title" target="_blank"><i class="ico-stumbleupon3"></i></a>
-                                <a class="digg" href="http://www.digg.com/submit?phase=2&amp;url=http://www.yourlink.com&amp;title=your-post-title" target="_blank"><i class="ico-digg"></i></a>
-                                <a class="reddit" href="http://www.reddit.com/submit?url=http://www.yourlink.com&amp;title=your-post-title" target="_blank"><i class="ico-reddit2"></i></a>
-                                <a class="evernote" href="http://www.evernote.com/clip.action?url=http://www.yourlink.com&amp;title=your-post-title" target="_blank"><i class="ico-evernote"></i></a>-->
-                                <a class="delicious"
-                                   href="http://del.icio.us/post?url=http://www.yourlink.com&amp;title=your-post-title&amp;notes=your-content-here"
-                                   target="_blank"><i class="ico-delicious"></i></a>
-                                <a class="tumblr"
-                                   href="http://www.tumblr.com/share?v=3&amp;u=http://www.yourlink.com&amp;t=your-post-title"
-                                   target="_blank"><i class="ico-tumblr"></i></a>
-
+                            <div class="social_media clearfix">
+                                <span class="social_share_btn">Follow :</span>
+                                <a href="http://github.com/qulongjun" target="_blank"
+                                                                  class="github"><i class="ico-github6"></i></a> <a
+                                    href="https://www.linkedin.com/in/qulongjun" target="_blank" class="linkedin"><i
+                                    class="ico-linkedin3"></i></a> <a href="http://cv.qulongjun.cn" target="_blank"
+                                                                      class="user"><i class="ico-user"></i></a> <a
+                                    href="tel:17717567217" target="_blank" class="phone"><i class="ico-phone"></i></a>
+                                <a href="mailto:qulongjun12@163.com" target="_blank" class="email"><i
+                                        class="ico-mail6"></i></a>
                             </div>
                         </div>
                         <!-- End Social Share-->
@@ -203,27 +185,27 @@
                         <ul class="tabs-navi">
                             <li>
                                 <a data-content="details" class="selected" href="javascript:;">
-                                    <span><i class="ico-laptop4"></i></span>Details
+                                    <span><i class="ico-laptop4"></i></span>项目概述
                                 </a>
                             </li>
                             <li>
                                 <a data-content="features" href="javascript:;">
-                                    <span><i class="ico-eye3"></i></span>Features
+                                    <span><i class="ico-eye3"></i></span>功能特性
                                 </a>
                             </li>
-                            <!-- <li>
+                            <li>
                                 <a data-content="info" href="#">
-                                    <span><i class="ico-anchor2"></i></span>Info
+                                    <span><i class="ico-anchor2"></i></span>技术背景
                                 </a>
-                            </li> -->
+                            </li>
                             <li>
                                 <a data-content="stats" href="javascript:;">
-                                    <span><i class="ico-pie-graph"></i></span>Stats
+                                    <span><i class="ico-pie-graph"></i></span>历史版本
                                 </a>
                             </li>
                             <li>
                                 <a data-content="additional" href="javascript:;">
-                                    <span><i class="ico-check3"></i></span>Additional Info
+                                    <span><i class="ico-check3"></i></span>当前状态
                                 </a>
                             </li>
                         </ul>
