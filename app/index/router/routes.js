@@ -7,7 +7,7 @@ var routes = [
         name: "/list",
         component: List
     }, {
-        path: "/detail",
+        path: "/detail/:id",
         name: "/detail",
         component: Detail
     }

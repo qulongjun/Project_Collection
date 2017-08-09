@@ -362,21 +362,32 @@
     </div>
 </template>
 <script type="es6">
-    import {_backBottom, _backPosition} from '../script/js-utils'
+    import detail from '../demo/detail.json';
     module.exports = {
         data(){
-            return {}
+            return {
+                details: {}
+            }
         },
-
         mounted(){
             const me = this;
-
-            me.$nextTick(() => {
-                me._initPlugins();
-                me._initTabs();
-            })
+            me._fetchDetail();
         },
         methods: {
+            _fetchID(){
+                const me = this;
+                const params = me.$route.params;
+                return params.id;
+            },
+            _fetchDetail(){
+                const me = this;
+                const data = detail;
+                me.details = data;
+                me.$nextTick(() => {
+                    me._initPlugins();
+                    me._initTabs();
+                })
+            },
             _initPlugins(){
                 const site_dir = "ltr";
                 $(".thumbs_gall_slider_con").each(function (index, element) {

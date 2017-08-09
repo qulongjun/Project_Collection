@@ -39,13 +39,18 @@
                             :class="'filter_item_block '+item.category.map(function(m){return m.name}).join(' ')">
                         <div class="porto_block">
                             <div class="porto_type">
-                                <a data-rel="magnific-popup" href="http://cdn.qulongjun.cn/default_cover.jpg">
-                                    <img src="../images/portfolio/porto3.jpg" alt="Portfolio Name">
+                                <a data-rel="magnific-popup" :href="item.expand_url">
+                                    <img :src="item.cover_url" alt="Portfolio Name">
                                 </a>
                                 <div class="porto_nav">
-                                    <a href="#" class="icon_expand"><span><i class="ico-maximize"></i></span></a>
-                                    <a href="#" class="icon_expand"><span><i class="ico-open"></i></span></a>
-                                    <a href="#" class="icon_expand"><span><i class="ico-link2"></i></span></a>
+                                    <a href="#" class="icon_expand expand_image"><span><i
+                                            class="ico-maximize"></i></span></a>
+                                    <router-link class="icon_expand"
+                                                 :to="{ name: '/detail', params: { id: item.id }}"><span><i
+                                            class="ico-open"></i></span></router-link>
+                                    <!--<a href="#" class="icon_expand"><span><i class="ico-open"></i></span></a>-->
+                                    <a :href="item.source_url" target="_blank" class="icon_expand"><span><i
+                                            class="ico-link2"></i></span></a>
                                 </div>
                             </div>
                             <div class="porto_desc">
@@ -108,16 +113,16 @@
             _expandImage(){
                 $('.porto_block').each(function (index, element) {
                     var gall_con = $(this);
-                    var expander = $(this).find("a.expand_img");
-                    var expander_b = $(this).find("a.icon_expand");
+                    var expander = $(this).find("a.expand_image");
+                    //var expander_b = $(this).find("a.icon_expand");
                     expander.click(function () {
                         gall_con.find("a:first").click();
                         return false;
                     });
-                    expander_b.click(function () {
-                        gall_con.find("a:first").click();
-                        return false;
-                    });
+//                    expander_b.click(function () {
+//                        gall_con.find("a:first").click();
+//                        return false;
+//                    });
                 });
                 $(".magnific-popup, a[data-rel^='magnific-popup']").magnificPopup({
                     type: 'image',
