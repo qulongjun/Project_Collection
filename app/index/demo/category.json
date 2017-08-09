@@ -2,43 +2,23 @@
   "results": [
     {
       "id": 1,
-      "name": "Media",
-      "count": "60"
+      "name": "design"
     },
     {
       "id": 2,
-      "name": "Movies",
-      "count": "21"
+      "name": "video"
     },
     {
       "id": 3,
-      "name": "News",
-      "count": "75"
+      "name": "printing"
     },
     {
       "id": 4,
-      "name": "Sound",
-      "count": "11"
+      "name": "wordpress"
     },
     {
       "id": 5,
-      "name": "Tutorials",
-      "count": "6"
-    },
-    {
-      "id": 6,
-      "name": "Tweets",
-      "count": "20"
-    },
-    {
-      "id": 7,
-      "name": "Uncategorized",
-      "count": "9"
-    },
-    {
-      "id": 8,
-      "name": "Wordpress",
-      "count": "32"
+      "name": "photography"
     }
   ]
 }

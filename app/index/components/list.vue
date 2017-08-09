@@ -5,18 +5,11 @@
                 <ul data-option-key="filter" class="option-set clearfix" id="filter-by">
                     <li><a data-option-value="*" class="selected" href="#"><span>全部</span><span class="num"></span></a>
                     </li>
-                    <li><a data-option-value=".design" class="" href="#"><span>Design</span><span
-                            class="num"></span></a>
-                    </li>
-                    <li><a data-option-value=".photography" class="" href="#"><span>Photography</span><span
-                            class="num"></span></a></li>
-                    <li><a data-option-value=".video" class="" href="#"><span>Video</span><span class="num"></span></a>
-                    </li>
-                    <li><a data-option-value=".printing" class="" href="#"><span>Printing</span><span
-                            class="num"></span></a></li>
-                    <li><a data-option-value=".wordpress" class="" href="#"><span>Wordpress</span><span
-                            class="num"></span></a>
-                    </li>
+                    <template v-for="item in categoryList">
+                        <li><a :data-option-value="'.'+item.name" class="" href="#"><span>{{item.name}}</span><span
+                                class="num"></span></a>
+                        </li>
+                    </template>
                 </ul>
                 <div class="sort_list">
                     <a href="#" class="sort_selecter">
@@ -41,405 +34,35 @@
             </div>
 
             <div class="hm_filter_wrapper_con">
-                <div class="filter_item_block video">
-                    <div class="porto_block">
-                        <div class="porto_type">
-                            <a data-rel="magnific-popup" href="http://cdn.qulongjun.cn/default_cover.jpg">
-                                <img src="../images/portfolio/porto1.jpg" alt="Portfolio Name">
-                            </a>
-                            <div class="porto_nav">
-                                <a href="#" class="icon_expand"><span><i class="ico-maximize"></i></span></a>
-                                <a href="#" class="icon_expand"><span><i class="ico-open"></i></span></a>
-                                <a href="#" class="icon_expand"><span><i class="ico-link2"></i></span></a>
+                <template v-for="item in projectList">
+                    <div
+                            :class="'filter_item_block '+item.category.map(function(m){return m.name}).join(' ')">
+                        <div class="porto_block">
+                            <div class="porto_type">
+                                <a data-rel="magnific-popup" href="http://cdn.qulongjun.cn/default_cover.jpg">
+                                    <img src="../images/portfolio/porto3.jpg" alt="Portfolio Name">
+                                </a>
+                                <div class="porto_nav">
+                                    <a href="#" class="icon_expand"><span><i class="ico-maximize"></i></span></a>
+                                    <a href="#" class="icon_expand"><span><i class="ico-open"></i></span></a>
+                                    <a href="#" class="icon_expand"><span><i class="ico-link2"></i></span></a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="porto_desc">
-                            <h6 class="name">Flat Logo Design</h6>
-                            <div class="porto_meta clearfix">
-                                <span class="porto_date"><span class="number">20141213</span>2014/12/13</span>
-                                <span class="porto_nums">
-							<span class="comm"><i class="ico-comments"></i><span class="comm_counter">45</span></span>
-							<span class="like"><i class="ico-heart2"></i><span class="like_counter">120</span></span>
+                            <div class="porto_desc">
+                                <h6 class="name">{{item.name}}</h6>
+                                <div class="porto_meta clearfix">
+                                    <span class="porto_date"><span
+                                            class="number">{{item.finish_date_number}}</span>{{item.finish_date}}</span>
+                                    <span class="porto_nums">
+							<span class="comm"><i class="ico-comments"></i><span
+                                    class="like_counter">{{item.visit_count}}</span></span>
 						    </span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div><!-- Item -->
+                    </div><!-- Item -->
+                </template>
 
-                <div class="filter_item_block design video printing wordpress">
-                    <div class="porto_block">
-                        <div class="porto_type">
-                            <a data-rel="magnific-popup" href="http://cdn.qulongjun.cn/default_cover.jpg">
-                                <img src="../images/portfolio/porto2.jpg" alt="Portfolio Name">
-                            </a>
-                            <div class="porto_nav">
-                                <a href="#" class="icon_expand"><span><i class="ico-maximize"></i></span></a>
-                                <a href="#" class="icon_expand"><span><i class="ico-open"></i></span></a>
-                                <a href="#" class="icon_expand"><span><i class="ico-link2"></i></span></a>
-                            </div>
-                        </div>
-                        <div class="porto_desc">
-                            <h6 class="name">Dawn of Justice</h6>
-                            <div class="porto_meta clearfix">
-                                <span class="porto_date"><span class="number">20141215</span>2014/12/15</span>
-                                <span class="porto_nums">
-							<span class="comm"><i class="ico-comments"></i><span class="comm_counter">12</span></span>
-							<span class="like"><i class="ico-heart2"></i><span class="like_counter">100</span></span>
-						    </span>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- Item -->
-
-                <div class="filter_item_block design wordpress">
-                    <div class="porto_block">
-                        <div class="porto_type">
-                            <a data-rel="magnific-popup" href="http://cdn.qulongjun.cn/default_cover.jpg">
-                                <img src="../images/portfolio/porto3.jpg" alt="Portfolio Name">
-                            </a>
-                            <div class="porto_nav">
-                                <a href="#" class="icon_expand"><span><i class="ico-maximize"></i></span></a>
-                                <a href="#" class="icon_expand"><span><i class="ico-open"></i></span></a>
-                                <a href="#" class="icon_expand"><span><i class="ico-link2"></i></span></a>
-                            </div>
-                        </div>
-                        <div class="porto_desc">
-                            <h6 class="name">Fly On the sky</h6>
-                            <div class="porto_meta clearfix">
-                                <span class="porto_date"><span class="number">20141210</span>2014/12/10</span>
-                                <span class="porto_nums">
-							<span class="comm"><i class="ico-comments"></i><span class="comm_counter">20</span></span>
-							<span class="like"><i class="ico-heart2"></i><span class="like_counter">263</span></span>
-						    </span>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- Item -->
-
-                <div class="filter_item_block design photography printing">
-                    <div class="porto_block">
-                        <div class="porto_type">
-                            <a data-rel="magnific-popup" href="http://cdn.qulongjun.cn/default_cover.jpg">
-                                <img src="../images/portfolio/porto4.jpg" alt="Portfolio Name">
-                            </a>
-                            <div class="porto_nav">
-                                <a href="#" class="icon_expand"><span><i class="ico-maximize"></i></span></a>
-                                <a href="#" class="icon_expand"><span><i class="ico-open"></i></span></a>
-                                <a href="#" class="icon_expand"><span><i class="ico-link2"></i></span></a>
-                            </div>
-                        </div>
-                        <div class="porto_desc">
-                            <h6 class="name">Need For Speed</h6>
-                            <div class="porto_meta clearfix">
-                                <span class="porto_date"><span class="number">20141220</span>2014/12/20</span>
-                                <span class="porto_nums">
-							<span class="comm"><i class="ico-comments"></i><span class="comm_counter">32</span></span>
-							<span class="like"><i class="ico-heart2"></i><span class="like_counter">520</span></span>
-						    </span>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- Item -->
-
-                <div class="filter_item_block design wordpress photography printing">
-                    <div class="porto_block">
-                        <div class="porto_type">
-                            <a data-rel="magnific-popup" href="http://cdn.qulongjun.cn/default_cover.jpg">
-                                <img src="../images/portfolio/porto6.jpg" alt="Portfolio Name">
-                            </a>
-                            <div class="porto_nav">
-                                <a href="#" class="icon_expand"><span><i class="ico-maximize"></i></span></a>
-                                <a href="#" class="icon_expand"><span><i class="ico-open"></i></span></a>
-                                <a href="#" class="icon_expand"><span><i class="ico-link2"></i></span></a>
-                            </div>
-                        </div>
-                        <div class="porto_desc">
-                            <h6 class="name">Star Lord</h6>
-                            <div class="porto_meta clearfix">
-                                <span class="porto_date"><span class="number">20141110</span>2014/11/10</span>
-                                <span class="porto_nums">
-							<span class="comm"><i class="ico-comments"></i><span class="comm_counter">23</span></span>
-							<span class="like"><i class="ico-heart2"></i><span class="like_counter">256</span></span>
-						    </span>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- Item -->
-
-                <div class="filter_item_block design wordpress photography">
-                    <div class="porto_block">
-                        <div class="porto_type">
-                            <a data-rel="magnific-popup" href="http://cdn.qulongjun.cn/default_cover.jpg">
-                                <img src="../images/portfolio/porto7.jpg" alt="Portfolio Name">
-                            </a>
-                            <div class="porto_nav">
-                                <a href="#" class="icon_expand"><span><i class="ico-maximize"></i></span></a>
-                                <a href="#" class="icon_expand"><span><i class="ico-open"></i></span></a>
-                                <a href="#" class="icon_expand"><span><i class="ico-link2"></i></span></a>
-                            </div>
-                        </div>
-                        <div class="porto_desc">
-                            <h6 class="name">Into the light</h6>
-                            <div class="porto_meta clearfix">
-                                <span class="porto_date"><span class="number">20141011</span>2014/10/11</span>
-                                <span class="porto_nums">
-							<span class="comm"><i class="ico-comments"></i><span class="comm_counter">125</span></span>
-							<span class="like"><i class="ico-heart2"></i><span class="like_counter">766</span></span>
-						    </span>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- Item -->
-
-                <div class="filter_item_block design wordpress printing">
-                    <div class="porto_block">
-                        <div class="porto_type">
-                            <a data-rel="magnific-popup" href="http://cdn.qulongjun.cn/default_cover.jpg">
-                                <img src="../images/portfolio/porto8.jpg" alt="Portfolio Name">
-                            </a>
-                            <div class="porto_nav">
-                                <a href="#" class="icon_expand"><span><i class="ico-maximize"></i></span></a>
-                                <a href="#" class="icon_expand"><span><i class="ico-open"></i></span></a>
-                                <a href="#" class="icon_expand"><span><i class="ico-link2"></i></span></a>
-                            </div>
-                        </div>
-                        <div class="porto_desc">
-                            <h6 class="name">Dont be Shy</h6>
-                            <div class="porto_meta clearfix">
-                                <span class="porto_date"><span class="number">20141015</span>2014/10/15</span>
-                                <span class="porto_nums">
-							<span class="comm"><i class="ico-comments"></i><span class="comm_counter">221</span></span>
-							<span class="like"><i class="ico-heart2"></i><span class="like_counter">345</span></span>
-						    </span>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- Item -->
-
-                <div class="filter_item_block design wordpress printing">
-                    <div class="porto_block">
-                        <div class="porto_type">
-                            <a data-rel="magnific-popup" href="http://cdn.qulongjun.cn/default_cover.jpg">
-                                <img src="../images/portfolio/porto8.jpg" alt="Portfolio Name">
-                            </a>
-                            <div class="porto_nav">
-                                <a href="#" class="icon_expand"><span><i class="ico-maximize"></i></span></a>
-                                <a href="#" class="icon_expand"><span><i class="ico-open"></i></span></a>
-                                <a href="#" class="icon_expand"><span><i class="ico-link2"></i></span></a>
-                            </div>
-                        </div>
-                        <div class="porto_desc">
-                            <h6 class="name">Dont be Shy</h6>
-                            <div class="porto_meta clearfix">
-                                <span class="porto_date"><span class="number">20141015</span>2014/10/15</span>
-                                <span class="porto_nums">
-							<span class="comm"><i class="ico-comments"></i><span class="comm_counter">221</span></span>
-							<span class="like"><i class="ico-heart2"></i><span class="like_counter">345</span></span>
-						    </span>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- Item -->
-
-                <div class="filter_item_block design wordpress printing">
-                    <div class="porto_block">
-                        <div class="porto_type">
-                            <a data-rel="magnific-popup" href="http://cdn.qulongjun.cn/default_cover.jpg">
-                                <img src="../images/portfolio/porto8.jpg" alt="Portfolio Name">
-                            </a>
-                            <div class="porto_nav">
-                                <a href="#" class="icon_expand"><span><i class="ico-maximize"></i></span></a>
-                                <a href="#" class="icon_expand"><span><i class="ico-open"></i></span></a>
-                                <a href="#" class="icon_expand"><span><i class="ico-link2"></i></span></a>
-                            </div>
-                        </div>
-                        <div class="porto_desc">
-                            <h6 class="name">Dont be Shy</h6>
-                            <div class="porto_meta clearfix">
-                                <span class="porto_date"><span class="number">20141015</span>2014/10/15</span>
-                                <span class="porto_nums">
-							<span class="comm"><i class="ico-comments"></i><span class="comm_counter">221</span></span>
-							<span class="like"><i class="ico-heart2"></i><span class="like_counter">345</span></span>
-						    </span>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- Item -->
-
-                <div class="filter_item_block design wordpress printing">
-                    <div class="porto_block">
-                        <div class="porto_type">
-                            <a data-rel="magnific-popup" href="http://cdn.qulongjun.cn/default_cover.jpg">
-                                <img src="../images/portfolio/porto8.jpg" alt="Portfolio Name">
-                            </a>
-                            <div class="porto_nav">
-                                <a href="#" class="icon_expand"><span><i class="ico-maximize"></i></span></a>
-                                <a href="#" class="icon_expand"><span><i class="ico-open"></i></span></a>
-                                <a href="#" class="icon_expand"><span><i class="ico-link2"></i></span></a>
-                            </div>
-                        </div>
-                        <div class="porto_desc">
-                            <h6 class="name">Dont be Shy</h6>
-                            <div class="porto_meta clearfix">
-                                <span class="porto_date"><span class="number">20141015</span>2014/10/15</span>
-                                <span class="porto_nums">
-							<span class="comm"><i class="ico-comments"></i><span class="comm_counter">221</span></span>
-							<span class="like"><i class="ico-heart2"></i><span class="like_counter">345</span></span>
-						    </span>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- Item -->
-
-                <div class="filter_item_block design wordpress printing">
-                    <div class="porto_block">
-                        <div class="porto_type">
-                            <a data-rel="magnific-popup" href="http://cdn.qulongjun.cn/default_cover.jpg">
-                                <img src="../images/portfolio/porto8.jpg" alt="Portfolio Name">
-                            </a>
-                            <div class="porto_nav">
-                                <a href="#" class="icon_expand"><span><i class="ico-maximize"></i></span></a>
-                                <a href="#" class="icon_expand"><span><i class="ico-open"></i></span></a>
-                                <a href="#" class="icon_expand"><span><i class="ico-link2"></i></span></a>
-                            </div>
-                        </div>
-                        <div class="porto_desc">
-                            <h6 class="name">Dont be Shy</h6>
-                            <div class="porto_meta clearfix">
-                                <span class="porto_date"><span class="number">20141015</span>2014/10/15</span>
-                                <span class="porto_nums">
-							<span class="comm"><i class="ico-comments"></i><span class="comm_counter">221</span></span>
-							<span class="like"><i class="ico-heart2"></i><span class="like_counter">345</span></span>
-						    </span>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- Item -->
-
-                <div class="filter_item_block design wordpress printing">
-                    <div class="porto_block">
-                        <div class="porto_type">
-                            <a data-rel="magnific-popup" href="http://cdn.qulongjun.cn/default_cover.jpg">
-                                <img src="../images/portfolio/porto8.jpg" alt="Portfolio Name">
-                            </a>
-                            <div class="porto_nav">
-                                <a href="#" class="icon_expand"><span><i class="ico-maximize"></i></span></a>
-                                <a href="#" class="icon_expand"><span><i class="ico-open"></i></span></a>
-                                <a href="#" class="icon_expand"><span><i class="ico-link2"></i></span></a>
-                            </div>
-                        </div>
-                        <div class="porto_desc">
-                            <h6 class="name">Dont be Shy</h6>
-                            <div class="porto_meta clearfix">
-                                <span class="porto_date"><span class="number">20141015</span>2014/10/15</span>
-                                <span class="porto_nums">
-							<span class="comm"><i class="ico-comments"></i><span class="comm_counter">221</span></span>
-							<span class="like"><i class="ico-heart2"></i><span class="like_counter">345</span></span>
-						    </span>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- Item -->
-
-                <div class="filter_item_block design wordpress printing">
-                    <div class="porto_block">
-                        <div class="porto_type">
-                            <a data-rel="magnific-popup" href="http://cdn.qulongjun.cn/default_cover.jpg">
-                                <img src="../images/portfolio/porto8.jpg" alt="Portfolio Name">
-                            </a>
-                            <div class="porto_nav">
-                                <a href="#" class="icon_expand"><span><i class="ico-maximize"></i></span></a>
-                                <a href="#" class="icon_expand"><span><i class="ico-open"></i></span></a>
-                                <a href="#" class="icon_expand"><span><i class="ico-link2"></i></span></a>
-                            </div>
-                        </div>
-                        <div class="porto_desc">
-                            <h6 class="name">Dont be Shy</h6>
-                            <div class="porto_meta clearfix">
-                                <span class="porto_date"><span class="number">20141015</span>2014/10/15</span>
-                                <span class="porto_nums">
-							<span class="comm"><i class="ico-comments"></i><span class="comm_counter">221</span></span>
-							<span class="like"><i class="ico-heart2"></i><span class="like_counter">345</span></span>
-						    </span>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- Item -->
-
-                <div class="filter_item_block design wordpress printing">
-                    <div class="porto_block">
-                        <div class="porto_type">
-                            <a data-rel="magnific-popup" href="http://cdn.qulongjun.cn/default_cover.jpg">
-                                <img src="../images/portfolio/porto8.jpg" alt="Portfolio Name">
-                            </a>
-                            <div class="porto_nav">
-                                <a href="#" class="icon_expand"><span><i class="ico-maximize"></i></span></a>
-                                <a href="#" class="icon_expand"><span><i class="ico-open"></i></span></a>
-                                <a href="#" class="icon_expand"><span><i class="ico-link2"></i></span></a>
-                            </div>
-                        </div>
-                        <div class="porto_desc">
-                            <h6 class="name">Dont be Shy</h6>
-                            <div class="porto_meta clearfix">
-                                <span class="porto_date"><span class="number">20141015</span>2014/10/15</span>
-                                <span class="porto_nums">
-							<span class="comm"><i class="ico-comments"></i><span class="comm_counter">221</span></span>
-							<span class="like"><i class="ico-heart2"></i><span class="like_counter">345</span></span>
-						    </span>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- Item -->
-
-                <div class="filter_item_block design wordpress printing">
-                    <div class="porto_block">
-                        <div class="porto_type">
-                            <a data-rel="magnific-popup" href="http://cdn.qulongjun.cn/default_cover.jpg">
-                                <img src="../images/portfolio/porto8.jpg" alt="Portfolio Name">
-                            </a>
-                            <div class="porto_nav">
-                                <a href="#" class="icon_expand"><span><i class="ico-maximize"></i></span></a>
-                                <a href="#" class="icon_expand"><span><i class="ico-open"></i></span></a>
-                                <a href="#" class="icon_expand"><span><i class="ico-link2"></i></span></a>
-                            </div>
-                        </div>
-                        <div class="porto_desc">
-                            <h6 class="name">Dont be Shy</h6>
-                            <div class="porto_meta clearfix">
-                                <span class="porto_date"><span class="number">20141015</span>2014/10/15</span>
-                                <span class="porto_nums">
-							<span class="comm"><i class="ico-comments"></i><span class="comm_counter">221</span></span>
-							<span class="like"><i class="ico-heart2"></i><span class="like_counter">345</span></span>
-						    </span>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- Item -->
-
-                <div class="filter_item_block design wordpress printing">
-                    <div class="porto_block">
-                        <div class="porto_type">
-                            <a data-rel="magnific-popup" href="http://cdn.qulongjun.cn/default_cover.jpg">
-                                <img src="../images/portfolio/porto8.jpg" alt="Portfolio Name">
-                            </a>
-                            <div class="porto_nav">
-                                <a href="#" class="icon_expand"><span><i class="ico-maximize"></i></span></a>
-                                <a href="#" class="icon_expand"><span><i class="ico-open"></i></span></a>
-                                <a href="#" class="icon_expand"><span><i class="ico-link2"></i></span></a>
-                            </div>
-                        </div>
-                        <div class="porto_desc">
-                            <h6 class="name">Dont be Shy</h6>
-                            <div class="porto_meta clearfix">
-                                <span class="porto_date"><span class="number">20141015</span>2014/10/15</span>
-                                <span class="porto_nums">
-							<span class="comm"><i class="ico-comments"></i><span class="comm_counter">221</span></span>
-							<span class="like"><i class="ico-heart2"></i><span class="like_counter">345</span></span>
-						    </span>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- Item -->
 
             </div>
         </div>
@@ -447,21 +70,41 @@
     </div>
 </template>
 <script type="es6">
-    import {getScreenWidth} from '../script/js-utils'
+    import {getScreenWidth} from '../script/js-utils';
+    import data from '../demo/list.json';
+    import categorys from '../demo/category.json'
     module.exports = {
         data(){
-            return {}
+            return {
+                projectList: [],
+                categoryList: []
+            }
         },
         mounted(){
             const me = this;
+            me._initData();
 
-
-            me.$nextTick(() => {
-                me._initPlugins();
-                me._expandImage();
-            });
         },
         methods: {
+            _initData(){
+                const me = this;
+                me._initList();
+                me._initCategory();
+                me.$nextTick(() => {
+                    me._initPlugins();
+                    me._expandImage();
+                });
+            },
+            _initCategory(){
+                const me = this;
+                const data = categorys.results;
+                me.categoryList = data;
+            },
+            _initList(){
+                const me = this;
+                const list = data.results;
+                me.projectList = list;
+            },
             _expandImage(){
                 $('.porto_block').each(function (index, element) {
                     var gall_con = $(this);
@@ -550,6 +193,7 @@
                                 },
                                 getSortData: {
                                     name: '.name',
+                                    visit: '.visit',
                                     like_counter: '.like_counter parseInt',
                                     number: '.number parseInt',
                                     comm_counter: '.comm_counter parseInt',
@@ -580,6 +224,7 @@
                                 },
                                 getSortData: {
                                     name: '.name',
+                                    visit: '.visit',
                                     like_counter: '.like_counter parseInt',
                                     number: '.number parseInt',
                                     comm_counter: '.comm_counter parseInt',
