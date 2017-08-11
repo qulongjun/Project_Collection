@@ -148,7 +148,7 @@
                             <div class="social_media clearfix">
                                 <span class="social_share_btn">Follow :</span>
                                 <a href="http://github.com/qulongjun" target="_blank"
-                                                                  class="github"><i class="ico-github6"></i></a> <a
+                                   class="github"><i class="ico-github6"></i></a> <a
                                     href="https://www.linkedin.com/in/qulongjun" target="_blank" class="linkedin"><i
                                     class="ico-linkedin3"></i></a> <a href="http://cv.qulongjun.cn" target="_blank"
                                                                       class="user"><i class="ico-user"></i></a> <a
@@ -199,13 +199,8 @@
                                 </a>
                             </li>
                             <li>
-                                <a data-content="stats" href="javascript:;">
+                                <a data-content="history" href="javascript:;">
                                     <span><i class="ico-pie-graph"></i></span>历史版本
-                                </a>
-                            </li>
-                            <li>
-                                <a data-content="additional" href="javascript:;">
-                                    <span><i class="ico-check3"></i></span>当前状态
                                 </a>
                             </li>
                         </ul>
@@ -218,27 +213,23 @@
                             <ul class="list4">
                                 <li>
                                     <i class="ico-check4"></i>
-                                    <b>Category: </b> Graphic design, Web design
+                                    <b>所属类别: </b> Graphic design, Web design
                                 </li>
                                 <li>
                                     <i class="ico-check4"></i>
-                                    <b>Client: </b> Jon Example
+                                    <b>当前状态: </b> Jon Example
                                 </li>
                                 <li>
                                     <i class="ico-check4"></i>
-                                    <b>Date: </b> March 30, 2015
+                                    <b>最后更新: </b> March 30, 2015
                                 </li>
                                 <li>
                                     <i class="ico-check4"></i>
-                                    <b>Due Date: </b> October 24, 2015
+                                    <b>参与者: </b> John Martin.
                                 </li>
                                 <li>
                                     <i class="ico-check4"></i>
-                                    <b>Tags: </b> Identity, Print, Web
-                                </li>
-                                <li>
-                                    <i class="ico-check4"></i>
-                                    <b>Added By: </b> John Martin.
+                                    <b>项目主页: </b> Identity, Print, Web
                                 </li>
                             </ul>
 
@@ -262,79 +253,51 @@
                             </ul>
                         </li>
 
-                        <!-- <li data-content="info">
-                            <h2 class="title1 title_color2 upper">Project Information</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non a voluptatibus, ex odit totam cumque nihil eos asperiores ea, labore rerum. Doloribus tenetur quae impedit adipisci, laborum dolorum eaque ratione quaerat, eos dicta consequuntur atque ex facere voluptate cupiditate incidunt.</p>
-
-                            <p>Lorem ipsum dolor sit culpa doloremque voluptatum consectetur mollitia, atque expedita unde excepturi id, molestias maiores delectus quos molestiae. Ab iure provident adipisci eveniet quisquam ratione libero nam inventore error pariatur optio facilis assumenda sint atque cumque, omnis perspiciatis. Maxime minus quam voluptatum provident aliquam voluptatibus vel rerum. Soluta nulla tempora aspernatur.</p>
-                        </li> -->
-
-                        <li data-content="stats">
-                            <!-- Counter -->
-                            <div class="counter_a clearfix">
-                                <div class="col-md-3">
-                                    <div class="counter animated" data-animation="fadeInDown"
-                                         data-animation-delay="300">
-                                        <span class="icon"><i class="ico-user5"></i></span>
-                                        <span class="value" data-speed="4000" data-from="0"
-                                              data-to="150377">150377</span>
-                                        <span class="title">Favourites</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="counter animated" data-animation="fadeInDown"
-                                         data-animation-delay="600">
-                                        <span class="icon"><i class="ico-heart6"></i></span>
-                                        <span class="value" data-speed="4000" data-from="0" data-to="23345">23345</span>
-                                        <span class="title">Likes</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="counter animated" data-animation="fadeInDown"
-                                         data-animation-delay="900">
-                                        <span class="icon"><i class="ico-code2"></i></span>
-                                        <span class="value" data-speed="4000" data-from="0"
-                                              data-to="455899">455899</span>
-                                        <span class="title">Views</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="counter animated" data-animation="fadeInDown"
-                                         data-animation-delay="1200">
-                                        <span class="icon"><i class="ico-paperplane"></i></span>
-                                        <span class="value" data-speed="4000" data-from="0" data-to="543">543</span>
-                                        <span class="title">Reports</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Counter -->
+                        <li data-content="info">
+                            <ul class="list4">
+                                <li>
+                                    <i class="ico-bell-o"></i>
+                                    <b>前端框架: </b> Graphic design, Web design
+                                </li>
+                                <li>
+                                    <i class="ico-bell-o"></i>
+                                    <b>前端技术: </b> Graphic design, Web design
+                                </li>
+                                <li>
+                                    <i class="ico-bell-o"></i>
+                                    <b>服务器端语言: </b> John Martin.
+                                </li>
+                                <li>
+                                    <i class="ico-bell-o"></i>
+                                    <b>服务器端框架: </b> John Martin.
+                                </li>
+                                <li>
+                                    <i class="ico-bell-o"></i>
+                                    <b>其他: </b> Identity, Print, Web
+                                </li>
+                            </ul>
                         </li>
 
-                        <li data-content="additional">
+                        <li data-content="history">
                             <div class="table-responsive">
                                 <table class="table table-bordered">
                                     <thead>
                                     <tr>
-                                        <th>Type</th>
-                                        <th>Weight</th>
-                                        <th>Dimensions</th>
-                                        <th>Size</th>
-                                        <th>Color</th>
+                                        <th>序号</th>
+                                        <th>版本号</th>
+                                        <th>发布时间</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <td scope="row">Gallery</td>
-                                        <th>20 g</th>
-                                        <td>40 x 35 x 8 cm</td>
-                                        <td>L, M, S, XL, XS</td>
-                                        <td>Blue, Green</td>
+                                        <td scope="row">1</td>
+                                        <th>V1.0</th>
+                                        <td>2017-03-21</td>
                                     </tr>
                                     </tbody>
                                 </table>
                             </div>
                         </li>
-
                     </ul>
                 </div>
                 <!-- End Tabs Container -->
