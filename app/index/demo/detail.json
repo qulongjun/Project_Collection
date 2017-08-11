@@ -1,12 +1,7 @@
 {
   "id": 1,
-  "name": "项目名称1",
-  "finish_date": "2017-07-21",
-  "finish_date_number": "20170721",
-  "cover_url": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1502282413271&di=5f3892c7486a0eda0fddda7c21a46ea8&imgtype=0&src=http%3A%2F%2Fimage5.tuku.cn%2Fpic%2Fwallpaper%2Ffengjing%2Fdaziranshenqishanshuifengjingbizhi%2F012.jpg",
-  "expand_url": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1502282413271&di=5f3892c7486a0eda0fddda7c21a46ea8&imgtype=0&src=http%3A%2F%2Fimage5.tuku.cn%2Fpic%2Fwallpaper%2Ffengjing%2Fdaziranshenqishanshuifengjingbizhi%2F012.jpg",
-  "source_url": "https://github.com/qulongjun/Project_Collection",
-  "visit_count": 10,
+  "name": "这是项目名称",
+  "info":"<p>artTemplate 是新一代 javascript 模板引擎，它采用预编译方式让性能有了质的飞跃，并且充分利用 javascript 引擎特性，使得其性能无论在前端还是后端都有极其出色的表现。在 chrome 下渲染效率测试中分别是知名引擎 Mustache 与 micro tmpl 的 25 、 32 倍。</p><p>除了性能优势外，调试功能也值得一提。模板调试器可以精确定位到引发渲染错误的模板语句，解决了编写模板过程中无法调试的痛苦，让开发变得高效，也避免了因为单个模板出错导致整个应用崩溃的情况发生。</p>",
   "materials": [
     "http://img.tuku.cn/file_big/201503/d8905515d1c046aeba51025f0ea842f0.jpg",
     "http://image5.tuku.cn/pic/wallpaper/fengjing/daziranshenqishanshuifengjingbizhi/012.jpg",

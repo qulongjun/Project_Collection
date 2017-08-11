@@ -133,15 +133,8 @@
 
                     <!-- grid 6-->
                     <div class="col-md-6">
-                        <h2 class="title1 upper">Project Description</h2>
-                        <p>
-                            Inbox Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum recusandae rem animi
-                            accusamus quisquam reprehenderit sed voluptates, numquam, quibusdam velit dolores
-                            repellendus tempora corrupti accusantium obcaecati voluptate totam eveniet laboriosam.</p>
-                        <p>
-                            Inbox Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum recusandae rem animi
-                            accusamus quisquam reprehenderit sed voluptates, numquam, quibusdam velit dolores
-                            repellendus tempora corrupti.</p>
+                        <h2 class="title1 upper">{{details.name}}</h2>
+                        <div v-html="details.info"></div>
                         <span class="spacer20"></span>
                         <!-- Social Share-->
                         <div>
@@ -213,7 +206,8 @@
                             <ul class="list4">
                                 <li>
                                     <i class="ico-check4"></i>
-                                    <b>所属类别: </b> Graphic design, Web design
+                                    <b>所属类别: </b>
+                                    <template v-for="m in summary.category">{{m.name}} </template>
                                 </li>
                                 <li>
                                     <i class="ico-check4"></i>
@@ -283,17 +277,19 @@
                                 <table class="table table-bordered">
                                     <thead>
                                     <tr>
-                                        <th>序号</th>
-                                        <th>版本号</th>
-                                        <th>发布时间</th>
+                                        <th class="text-center">序号</th>
+                                        <th class="text-center">版本号</th>
+                                        <th class="text-center">发布时间</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                        <td scope="row">1</td>
-                                        <th>V1.0</th>
-                                        <td>2017-03-21</td>
-                                    </tr>
+                                    <template v-for="(item,index) in details.history">
+                                        <tr>
+                                            <td scope="row" class="text-center">{{index + 1}}</td>
+                                            <th class="text-center">{{item.ver_id}}</th>
+                                            <td class="text-center">{{item.ver_date}}</td>
+                                        </tr>
+                                    </template>
                                     </tbody>
                                 </table>
                             </div>
@@ -311,7 +307,8 @@
     module.exports = {
         data(){
             return {
-                details: {}
+                details: {},
+                summary: {}
             }
         },
         mounted(){
@@ -328,6 +325,7 @@
                 const me = this;
                 const data = detail;
                 me.details = data;
+                me.summary = data.summary;
                 me.$nextTick(() => {
                     me._initPlugins();
                     me._initTabs();
