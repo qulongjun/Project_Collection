@@ -27,104 +27,22 @@
                         <!-- Gallery -->
                         <div class="thumbs_gall_slider_con content_thumbs_gall gall_arrow2 clearfix">
                             <div class="thumbs_gall_slider_larg owl-carousel">
-                                <div class="item">
-                                    <a href="../images/blog/blog1-large.jpg">
-                                        <img src="../images/blog/blog1-large.jpg" alt="Image Title">
-                                    </a>
-                                </div>
-                                <div class="item">
-                                    <a href="../images/blog/blog2-large.jpg">
-                                        <img src="../images/blog/blog2-large.jpg" alt="Image Title">
-                                    </a>
-                                </div>
-                                <div class="item">
-                                    <a href="../images/blog/blog3-large.jpg">
-                                        <img src="../images/blog/blog3-large.jpg" alt="Image Title">
-                                    </a>
-                                </div>
-                                <div class="item">
-                                    <a href="../images/blog/blog4-large.jpg">
-                                        <img src="../images/blog/blog4-large.jpg" alt="Image Title">
-                                    </a>
-                                </div>
-                                <div class="item">
-                                    <a href="../images/blog/blog5-large.jpg">
-                                        <img src="../images/blog/blog5-large.jpg" alt="Image Title">
-                                    </a>
-                                </div>
-                                <div class="item">
-                                    <a href="../images/blog/blog6-large.jpg">
-                                        <img src="../images/blog/blog6-large.jpg" alt="Image Title">
-                                    </a>
-                                </div>
-                                <div class="item">
-                                    <a href="../images/blog/blog1-large.jpg">
-                                        <img src="../images/blog/blog1-large.jpg" alt="Image Title">
-                                    </a>
-                                </div>
-                                <div class="item">
-                                    <a href="../images/blog/blog2-large.jpg">
-                                        <img src="../images/blog/blog2-large.jpg" alt="Image Title">
-                                    </a>
-                                </div>
-                                <div class="item">
-                                    <a href="../images/blog/blog3-large.jpg">
-                                        <img src="../images/blog/blog3-large.jpg" alt="Image Title">
-                                    </a>
-                                </div>
-                                <div class="item">
-                                    <a href="../images/blog/blog4-large.jpg">
-                                        <img src="../images/blog/blog4-large.jpg" alt="Image Title">
-                                    </a>
-                                </div>
-                                <div class="item">
-                                    <a href="../images/blog/blog5-large.jpg">
-                                        <img src="../images/blog/blog5-large.jpg" alt="Image Title">
-                                    </a>
-                                </div>
-                                <div class="item">
-                                    <a href="../images/blog/blog6-large.jpg">
-                                        <img src="../images/blog/blog6-large.jpg" alt="Image Title">
-                                    </a>
-                                </div>
-                                <div class="item">
-                                    <a href="../images/blog/blog1-large.jpg">
-                                        <img src="../images/blog/blog1-large.jpg" alt="Image Title">
-                                    </a>
-                                </div>
-                                <div class="item">
-                                    <a href="../images/blog/blog2-large.jpg">
-                                        <img src="../images/blog/blog2-large.jpg" alt="Image Title">
-                                    </a>
-                                </div>
-                                <div class="item">
-                                    <a href="../images/blog/blog3-large.jpg">
-                                        <img src="../images/blog/blog3-large.jpg" alt="Image Title">
-                                    </a>
-                                </div>
-                                <div class="item">
-                                    <a href="../images/blog/blog4-large.jpg">
-                                        <img src="../images/blog/blog4-large.jpg" alt="Image Title">
-                                    </a>
-                                </div>
+                                <template v-for="material in details.materials">
+                                    <div class="item">
+                                        <a :href="material">
+                                            <img :src="material+'?imageMogr2/auto-orient/thumbnail/650x395!/blur/1x0/quality/75|imageslim'"
+                                                 alt="项目图片">
+                                        </a>
+                                    </div>
+                                </template>
                             </div>
                             <div class="gall_thumbs owl-carousel">
-                                <div class="item"><img src="../images/blog/blog1-thumb.jpg" alt="Image Title"></div>
-                                <div class="item"><img src="../images/blog/blog2-thumb.jpg" alt="Image Title"></div>
-                                <div class="item"><img src="../images/blog/blog3-thumb.jpg" alt="Image Title"></div>
-                                <div class="item"><img src="../images/blog/blog4-thumb.jpg" alt="Image Title"></div>
-                                <div class="item"><img src="../images/blog/blog5-thumb.jpg" alt="Image Title"></div>
-                                <div class="item"><img src="../images/blog/blog6-thumb.jpg" alt="Image Title"></div>
-                                <div class="item"><img src="../images/blog/blog1-thumb.jpg" alt="Image Title"></div>
-                                <div class="item"><img src="../images/blog/blog2-thumb.jpg" alt="Image Title"></div>
-                                <div class="item"><img src="../images/blog/blog3-thumb.jpg" alt="Image Title"></div>
-                                <div class="item"><img src="../images/blog/blog4-thumb.jpg" alt="Image Title"></div>
-                                <div class="item"><img src="../images/blog/blog5-thumb.jpg" alt="Image Title"></div>
-                                <div class="item"><img src="../images/blog/blog6-thumb.jpg" alt="Image Title"></div>
-                                <div class="item"><img src="../images/blog/blog1-thumb.jpg" alt="Image Title"></div>
-                                <div class="item"><img src="../images/blog/blog2-thumb.jpg" alt="Image Title"></div>
-                                <div class="item"><img src="../images/blog/blog3-thumb.jpg" alt="Image Title"></div>
-                                <div class="item"><img src="../images/blog/blog4-thumb.jpg" alt="Image Title"></div>
+                                <template v-for="material in details.materials">
+                                    <div class="item"><img
+                                            :src="material+'?imageMogr2/auto-orient/thumbnail/82x56!/interlace/1/blur/1x0/quality/75|imageslim'"
+                                            alt="项目缩略图"></div>
+                                </template>
+
                             </div>
                         </div>
                         <!-- End Gallery -->
@@ -134,8 +52,7 @@
                     <!-- grid 6-->
                     <div class="col-md-6">
                         <h2 class="title1 upper">{{details.name}}</h2>
-                        <div v-html="details.info"></div>
-                        <span class="spacer20"></span>
+                        <div class="typo"><p>{{details.info}}</p></div>
                         <!-- Social Share-->
                         <div>
                             <div class="social_media clearfix">
@@ -153,7 +70,7 @@
                         <!-- End Social Share-->
                         <span class="spacer30"></span>
                         <div>
-                            <a class="btn_a color2 medium_btn bottom_space" target="_self" href="#">
+                            <a class="btn_a color2 medium_btn bottom_space" target="_blank" :href="summary.index_site">
 							<span>
 								<i class="in_left ico-open"></i>
 								<span>查看详情</span>
@@ -207,68 +124,51 @@
                                 <li>
                                     <i class="ico-check4"></i>
                                     <b>所属类别: </b>
-                                    <template v-for="m in summary.category">{{m.name}} </template>
+                                    <template v-for="m in summary.category">
+                                        <span class="label label-primary upper"
+                                              style="margin-left: 5px;">{{m.name}}</span>
+                                    </template>
                                 </li>
                                 <li>
                                     <i class="ico-check4"></i>
-                                    <b>当前状态: </b> Jon Example
+                                    <b>当前状态: </b> <span
+                                        class="label"
+                                        :class="summary.state==1?'label-success':'label-danger'"> {{summary.state == 1 ? '已结束' : '开发中'}}</span>
+
                                 </li>
                                 <li>
                                     <i class="ico-check4"></i>
-                                    <b>最后更新: </b> March 30, 2015
+                                    <b>参与者: </b>
+                                    <template v-for="name in summary.participator">
+                                        <span class="label label-info upper" style="margin-left: 5px;">{{name}}</span>
+                                    </template>
                                 </li>
                                 <li>
                                     <i class="ico-check4"></i>
-                                    <b>参与者: </b> John Martin.
+                                    <b>创建时间: </b> {{summary.create_date}}
                                 </li>
                                 <li>
                                     <i class="ico-check4"></i>
-                                    <b>项目主页: </b> Identity, Print, Web
+                                    <b>项目主页: </b> <a :href="summary.index_site"
+                                                     target="_blank">{{summary.index_site}}</a>
                                 </li>
                             </ul>
 
                         </li>
 
                         <li data-content="features">
-
                             <ul class="list1 clearfix">
-                                <li>Multiple Layout</li>
-                                <li>Awesome Shortcodes</li>
-                                <li>Browser Compatibility</li>
-                                <li>Easy to Edit Animations</li>
-                                <li>Parallax Effect</li>
-                                <li>Responsive Design</li>
-                                <li>Multiple Layout</li>
-                                <li>Awesome Shortcodes</li>
-                                <li>Browser Compatibility</li>
-                                <li>Easy to Edit Animations</li>
-                                <li>Parallax Effect</li>
-                                <li>Responsive Design</li>
+                                <template v-for="feature in features">
+                                    <li>{{feature}}</li>
+                                </template>
                             </ul>
                         </li>
 
                         <li data-content="info">
-                            <ul class="list4">
-                                <li>
-                                    <i class="ico-bell-o"></i>
-                                    <b>前端框架: </b> Graphic design, Web design
-                                </li>
-                                <li>
-                                    <i class="ico-bell-o"></i>
-                                    <b>前端技术: </b> Graphic design, Web design
-                                </li>
-                                <li>
-                                    <i class="ico-bell-o"></i>
-                                    <b>服务器端语言: </b> John Martin.
-                                </li>
-                                <li>
-                                    <i class="ico-bell-o"></i>
-                                    <b>服务器端框架: </b> John Martin.
-                                </li>
-                                <li>
-                                    <i class="ico-bell-o"></i>
-                                    <b>其他: </b> Identity, Print, Web
-                                </li>
+                            <ul class="list3 clearfix">
+                                <template v-for="skill in skills">
+                                    <li>{{skill}}</li>
+                                </template>
                             </ul>
                         </li>
 
@@ -308,7 +208,9 @@
         data(){
             return {
                 details: {},
-                summary: {}
+                summary: {},
+                features: [],
+                skills: []
             }
         },
         mounted(){
@@ -326,9 +228,12 @@
                 const data = detail;
                 me.details = data;
                 me.summary = data.summary;
+                me.features = data.features;
+                me.skills = data.skills;
                 me.$nextTick(() => {
                     me._initPlugins();
                     me._initTabs();
+                    me._initGallery();
                 })
             },
             _initPlugins(){
@@ -411,6 +316,35 @@
                             sync2.trigger("owl.goTo", num - 1);
                         }
                     }
+                });
+            },
+            _initGallery(){
+                $('.thumbs_gall_slider_larg').magnificPopup({
+                    delegate: 'a',
+                    type: 'image',
+
+                    gallery: {
+                        enabled: true
+                    },
+                    removalDelay: 500,
+                    callbacks: {
+                        beforeOpen: function () {
+                            this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
+                            this.st.mainClass = /*this.st.el.attr('data-effect')*/ "mfp-zoom-in";
+                        }
+                    },
+                    closeOnContentClick: true,
+                    // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source
+                    midClick: true,
+                    retina: {
+                        ratio: 1,
+                        replaceSrc: function (item, ratio) {
+                            return item.src.replace(/\.\w+$/, function (m) {
+                                return '@2x' + m;
+                            });
+                        }
+                    }
+
                 });
             },
             _initTabs(){
