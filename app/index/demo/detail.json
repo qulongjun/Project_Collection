@@ -1,11 +1,15 @@
 {
   "id": 1,
   "name": "这是项目名称",
-  "info":"<p>artTemplate 是新一代 javascript 模板引擎，它采用预编译方式让性能有了质的飞跃，并且充分利用 javascript 引擎特性，使得其性能无论在前端还是后端都有极其出色的表现。在 chrome 下渲染效率测试中分别是知名引擎 Mustache 与 micro tmpl 的 25 、 32 倍。</p><p>除了性能优势外，调试功能也值得一提。模板调试器可以精确定位到引发渲染错误的模板语句，解决了编写模板过程中无法调试的痛苦，让开发变得高效，也避免了因为单个模板出错导致整个应用崩溃的情况发生。</p>",
+  "info": "artTemplate 是新一代 javascript 模板引擎，它采用预编译方式让性能有了质的飞跃，并且充分利用 javascript 引擎特性，使得其性能无论在前端还是后端都有极其出色的表现。在 chrome 下渲染效率测试中分别是知名引擎 Mustache 与 micro tmpl 的 25 、 32 倍。除了性能优势外，调试功能也值得一提。模板调试器可以精确定位到引发渲染错误的模板语句，解决了编写模板过程中无法调试的痛苦，让开发变得高效。",
   "materials": [
-    "http://img.tuku.cn/file_big/201503/d8905515d1c046aeba51025f0ea842f0.jpg",
-    "http://image5.tuku.cn/pic/wallpaper/fengjing/daziranshenqishanshuifengjingbizhi/012.jpg",
-    "http://tupian.enterdesk.com/2012/1029/zyz/03/14583115_1350966109847.jpg"
+    "http://cdn.qulongjun.cn/default_cover.jpg",
+    "http://cdn.qulongjun.cn/resource/6pm6Xv3r9p.jpeg",
+    "http://cdn.qulongjun.cn/resource/Gy7uEqGo6r.jpg",
+    "http://cdn.qulongjun.cn/resource/uIJEQUTRur.png",
+    "http://cdn.qulongjun.cn/resource/uEmaVoFWlW.jpeg",
+    "http://cdn.qulongjun.cn/resource/4fr4kXrotf.jpeg",
+    "http://cdn.qulongjun.cn/resource/VvaDeaQfN5.png"
   ],
   "summary": {
     "category": [
@@ -22,9 +26,15 @@
         "name": "photography"
       }
     ],
-    "state": "1"
+    "state": "1",
+    "participator": [
+      "瞿龙俊",
+      "张旺旺"
+    ],
+    "create_date": "2017-03-21",
+    "index_site": "https://www.github.com"
   },
-  "feature": [
+  "features": [
     "性能卓越，执行速度通常是Mustache与tmpl的20多倍",
     "支持运行时调试，可精确定位异常模板所在语句",
     "对NodeJSExpress友好支持",
@@ -35,27 +45,13 @@
     "模板语句简洁，无需前缀引用数据，有简洁版本与原生语法版本可选",
     "支持所有流行的浏览器"
   ],
-  "skills": {
-    "front_framework": "Jun-CLI",
-    "front_skills": [
-      "HTML5",
-      "CSS",
-      "JavaScript",
-      "Vue",
-      "WebPack"
-    ],
-    "back_language": "Java",
-    "back_framework": "JFinal",
-    "other": [
-      "jQuery",
-      "Backbone",
-      "Vue-Router"
-    ]
-  },
-  "participator": [
-    "瞿龙俊",
-    "陈洋洋",
-    "张旺旺"
+  "skills": [
+    "采用自家前端框架Jun-CLI创建，基于Vue+Vue-Router+WebPack",
+    "ECMAScript 6",
+    "Bootstrap",
+    "jQuery / Snippet / Vue-Resource / Owl Carousel",
+    "Java / MySQL",
+    "JFinal"
   ],
   "history": [
     {
